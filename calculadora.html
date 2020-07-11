@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator - Bonell Martinez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <hr>
+    <div class="calculatorShadow">
+        <div class="calculatorContainer">
+            <div class="screenContainer">
+                <input type="text" class="lcdScreen" id="lcdScreen"/>
+            </div>
+<div class="topButtonContainer">
+        <tr>
+            <td><button class="clearButton" value="" onclick="clean()" >C</button>
+            <td><button class="operationButton" value="%" onclick="insert('%')" >%</button>
+            <td><button class="operationButton" value="/" onclick="insert('/')" >/</button>
+        </tr>
+</div>
+<table class="buttonContainer">
+        <tr>
+            <td><button class="button" value="1" onclick="insert(1)" >1</button>
+            <td><button class="button" value="2" onclick="insert(2)" >2</button>
+            <td><button class="button" value="3" onclick="insert(3)" >3</button>
+            <td><button class="operationButton" value="+" onclick="insert('*')" >X</button>
+        </tr>
+
+         <tr>
+            <td><button class="button" value="4" onclick="insert(4)" >4</button></td>
+            <td> <button class="button" value="5" onclick="insert(5)" >5</button></td>
+            <td> <button class="button" value="6" onclick="insert(6)" >6</button></td>
+            <td><button class="operationButton" value="-" onclick="insert('-')" >-</button></td>
+        </tr>
+       
+        <tr>
+            <td><button class="button" value="7" onclick="insert(7)" >7</button></td>
+            <td> <button class="button" value="0" onclick="insert(8)" >8</button></td>
+            <td> <button class="button" value="9" onclick="insert(9)" >9</button></td>
+            <td><button class="operationButton" value="+" onclick="insert('+')" >+</button></td>
+        </tr>
+    </table>
+
+<div class="bottomButtonContainer">
+        <tr>
+            <td> <button class="button" value="." onclick="insert('.')" >.</button></td>
+            <td> <button class="zeroButton" value="0" onclick="insert(0)" >0</button></td>
+            <td><button class="evalButton" value="=" onclick="equal()" >=</button></td>
+        </tr>
+</div>
+
+</div>
+    </div>
+
+<br>
+<br>
+        <div class="projectDescription">
+            <center> 
+                    <p>
+                    Este proyecto nacio como una prueba, para testear mi conocimiento en Html, Css, y Javascript. <br>
+                        Me tomo un plazo de una semana completar esta calculadora, documentandome en internet, libros y <br>
+                        consultando a amigos programadores.  
+                    </p>
+            </center>   
+        </div>
+        
+<script src="script.js"></script>
+    </main>
+    <footer class="footer">
+        
+      <center>  <p>Bonell Martinez - 2020</p> </center>
+    </footer>
+</body>
+</html>
