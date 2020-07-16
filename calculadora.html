@@ -4,23 +4,243 @@
     <meta charset="UTF-8">
     <title>Calculator - Bonell Martinez</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scrolls_style.css">
 </head>
 <body>
-    <main>
-        <hr>
-    <div class="calculatorShadow">
-        <div class="calculatorContainer">
+    <main class="main">
+        <div class="scrollContainer">
+    
+<div class="htmlScrollContainer">
+    <p class="htmlScrollTitle"><strong>Html</strong></p>
+    <hr>         
+    <div class="htmlScroll">    
+<pre>
+&lt;div class="calculatorShadow"&gt;
+    &lt;div class="calculatorContainer"&gt;
+        &lt;div class="screenContainer"&gt;
+            &lt;input type="text" class="lcdScreen" id="lcdScreen" placeholder="0"/&gt;
+        &lt;/div&gt;
+    &lt;div class="topButtonContainer"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;button class="clearButton" value="" onclick="clean()" &gt;C&lt;/button&gt;
+        &lt;td&gt;&lt;button class="operationButton" value="%" onclick="insert('%')" &gt;%&lt;/button&gt;
+        &lt;td&gt;&lt;button class="operationButton" value="/" onclick="insert('/')" &gt;/&lt;/button&gt;
+    &lt;/tr&gt;
+    &lt;/div&gt;
+    &lt;table class="buttonContainer"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;button class="button" value="1" onclick="insert(1)" &gt;1&lt;/button&gt;
+        &lt;td&gt;&lt;button class="button" value="2" onclick="insert(2)" &gt;2&lt;/button&gt;
+        &lt;td&gt;&lt;button class="button" value="3" onclick="insert(3)" &gt;3&lt;/button&gt;
+        &lt;td&gt;&lt;button class="operationButton" value="+" onclick="insert('*')" &gt;X&lt;/button&gt;
+    &lt;/tr&gt;
+            
+    &lt;tr&gt;
+        &lt;td&gt;&lt;button class="button" value="4" onclick="insert(4)" &gt;4&lt;/button&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;button class="button" value="5" onclick="insert(5)" &gt;5&lt;/button&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;button class="button" value="6" onclick="insert(6)" &gt;6&lt;/button&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;button class="operationButton" value="-" onclick="insert('-')" &gt;-&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+               
+    &lt;tr&gt;
+        &lt;td&gt;&lt;button class="button" value="7" onclick="insert(7)" &gt;7&lt;/button&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;button class="button" value="0" onclick="insert(8)" &gt;8&lt;/button&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;button class="button" value="9" onclick="insert(9)" &gt;9&lt;/button&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;button class="operationButton" value="+" onclick="insert('+')" &gt;+&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+            
+    &lt;div class="bottomButtonContainer"&gt;
+        &lt;tr&gt;
+            &lt;td&gt; &lt;button class="button" value="." onclick="insert('.')" &gt;.&lt;/button&gt;&lt;/td&gt;
+            &lt;td&gt; &lt;button class="zeroButton" value="0" onclick="insert(0)" &gt;0&lt;/button&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button class="evalButton" value="=" onclick="equal()" &gt;=&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/div&gt;
+            
+    &lt;/div&gt;
+&lt;/div&gt;
+        
+&lt;script src="script.js"&gt;&lt;/script&gt;
+</pre>
+    </div>
+</div>  
+        
+        <div class="cssScrollContainer">
+            <p class="cssScrollTitle"><strong>Css</strong></p>
+                <hr>
+        <div class="cssScroll">
+<pre>
+    .calculatorContainer{
+    background-color: rgb(99, 99, 99);
+    width: 240px;
+    height: 350px;
+    border-radius: 5px;
+    margin-top: -5px;
+    margin-left: -5px;
+    position: absolute;
+               
+    }
+    .calculatorShadow{
+    background-color: rgba(0, 0, 0, 0.644);
+    width: 242px;
+    height: 352px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 380px;
+    position: relative;
+    }
+            
+    .lcdScreen{
+    background-color: rgb(68, 160, 103);
+    height: 50px;
+    width: 210px;
+    font-size:30px;
+    border-radius: 10px;
+    color:rgb(38, 97, 61);
+    margin-top: 10px;
+    margin-left: 10px;
+    }
+            
+    .lcdScreen:placeholder-shown{
+        color:rgb(38, 97, 61);
+    }
+            
+    .button{
+    background-color: rgb(70, 97, 255);
+    border-radius: 7px;
+    border-color:rgb(70, 97, 255);
+    width: 50px;
+    height: 50px;
+    color:white;
+    cursor: pointer;
+    position: relative;
+    font-size:18px;
+    }
+            
+    .clearButton{
+    height: 50px;
+    width: 105px;
+    background-color: rgb(255, 123, 0);
+    border-radius: 7px;
+    border-color: rgb(255, 123, 0);
+    color:white;
+    cursor: pointer;
+    font-size:18px;
+    }
+    .evalButton{
+    height: 50px;
+    width: 100px;
+    background-color: rgb(243, 17, 66);
+    border-radius: 7px;
+    border-color: rgb(243, 17, 66);
+    color:white;
+    cursor: pointer;
+    position: relative;
+    font-size:18px;
+    }
+    .zeroButton{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(70, 97, 255);
+    border-radius: 7px;
+    border-color: rgb(70, 97, 255);
+    color:white;
+    cursor: pointer;
+    position: relative;
+    font-size:18px;
+    }
+    
+    .operationButton{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(88, 226, 46);
+    border-radius: 7px;
+    border-color: rgb(88, 226, 46);
+    color:white;
+    cursor: pointer;
+    position: relative;
+    font-size:18px;
+    }
+    
+    .lcdScreen:focus{
+        outline: none;
+    }
+    
+    .button:focus{
+        outline: none;
+    }
+    
+    .zeroButton:focus {
+        outline: none;
+    }
+    
+    .operationButton:focus{
+        outline: none;
+    }
+    
+    .evalButton:focus {
+        outline: none;
+    }
+    .clearButton:focus {
+        outline: none;
+    }
+            
+    .topButtonContainer{
+         margin-top: 10px;
+        margin-left: 13px;
+    }
+            
+    .buttonContainer{
+        margin-left: 10px;
+    }
+            
+    .bottomButtonContainer{
+        margin-left: 13px;
+    }
+</pre>
+        </div>
+    </div>
+      
+    <div class="jsScrollContainer">
+            <p class="jsScrollTitle"><strong>JavaScript</strong></p>
+                <hr>    
+            <div class="jsScroll">
+                <pre>
+    let lcdScreen = document.getElementById('lcdScreen');
+
+    function insert(num){
+        lcdScreen.value = lcdScreen.value + num;
+    }
+
+    function clean(){
+        lcdScreen.value = "";
+    }
+
+    function equal(){
+        let exp = lcdScreen.value;
+        if(exp){
+        lcdScreen.value = eval(exp);
+        }
+    }
+            </pre>
+    </div>
+</div>
+</div> 
+<br>
+<br>
+    <div class="calculatorContainer">
             <div class="screenContainer">
-                <input type="text" class="lcdScreen" id="lcdScreen"/>
+                <input type="text" class="lcdScreen" id="lcdScreen" placeholder="0"/>
             </div>
-<div class="topButtonContainer">
+    <div class="topButtonContainer">
         <tr>
             <td><button class="clearButton" value="" onclick="clean()" >C</button>
             <td><button class="operationButton" value="%" onclick="insert('%')" >%</button>
             <td><button class="operationButton" value="/" onclick="insert('/')" >/</button>
         </tr>
-</div>
-<table class="buttonContainer">
+    </div>
+    <table class="buttonContainer">
         <tr>
             <td><button class="button" value="1" onclick="insert(1)" >1</button>
             <td><button class="button" value="2" onclick="insert(2)" >2</button>
@@ -43,16 +263,15 @@
         </tr>
     </table>
 
-<div class="bottomButtonContainer">
+    <div class="bottomButtonContainer">
         <tr>
             <td> <button class="button" value="." onclick="insert('.')" >.</button></td>
             <td> <button class="zeroButton" value="0" onclick="insert(0)" >0</button></td>
             <td><button class="evalButton" value="=" onclick="equal()" >=</button></td>
         </tr>
-</div>
+    </div>
 
 </div>
-    </div>
 
 <br>
 <br>
@@ -66,11 +285,7 @@
             </center>   
         </div>
         
-<script src="script.js"></script>
-    </main>
-    <footer class="footer">
-        
-      <center>  <p>Bonell Martinez - 2020</p> </center>
-    </footer>
+    <script src="script.js"></script>
+</main>
 </body>
 </html>
